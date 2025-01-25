@@ -101,7 +101,7 @@ window.onload = function () {
           gsap.to(".drty_fridge", { opacity: 0, duration: 1, delay: 2 });
           gsap.to(".drty_fridge2", { opacity: 0, duration: 1, delay: 2 });
 
-          const animationDuration = 10;
+          const animationDuration = 30;
           const timeline = gsap.timeline();
           timeline
             .to(".bacteria-oven", { opacity: 1, duration: 1, delay: 3 })
