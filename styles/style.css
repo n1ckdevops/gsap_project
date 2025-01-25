@@ -1,0 +1,454 @@
+@font-face {
+  font-family: "GothamPro";
+  src: url("/fonts/GothamPro-Bold.woff2") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "GothamPro", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.game {
+  position: absolute;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  z-index: 3;
+}
+
+.start_game {
+  position: absolute;
+  display: block;
+  width: 1080px;
+  height: auto;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 2;
+}
+
+.end_game {
+  position: absolute;
+  width: 1080px;
+  height: 810px;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+.end_screen {
+  position: absolute;
+}
+
+.end_screen_pena {
+  position: absolute;
+  width: 170%;
+  top: -229%;
+  left: -32%;
+}
+
+.end_screen_spray {
+  position: absolute;
+  width: 35%;
+  top: 10%;
+  right: 0;
+}
+
+.end_screen_button {
+  margin-top: 3rem;
+  border-radius: 20px;
+  background: rgb(210, 26, 35);
+  color: rgb(255, 255, 255);
+  font-size: 3.4rem;
+  width: 535px;
+  height: 150px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.end_screen_text {
+  position: absolute;
+  top: 253px;
+  left: 50px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+.end_screen_text_2 {
+  position: absolute;
+  top: 229px;
+  left: 78px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
+.end_screen_text p:nth-child(1) {
+  font-size: 59.6px;
+  font-weight: 700;
+  line-height: 106%;
+  letter-spacing: 2.92px;
+}
+
+.end_screen_text p:nth-child(2) {
+  font-size: 100.54px;
+  font-weight: 700;
+  line-height: 106%;
+  letter-spacing: 1.97px;
+}
+
+.end_screen_text,
+.end_screen_text_2 p:nth-child(3) {
+  font-size: 40.44px;
+  font-weight: 700;
+  line-height: 106%;
+  letter-spacing: 1.98px;
+}
+
+.end_screen_text_2 p:nth-child(1) {
+  font-size: 40.44px;
+  font-weight: 700;
+  line-height: 106%;
+  letter-spacing: 2.92px;
+}
+
+.end_screen_text_2 p:nth-child(2) {
+  margin-top: 19px;
+  margin-bottom: 25px;
+  font-size: 73.58px;
+  font-weight: 700;
+  line-height: 106%;
+  letter-spacing: 1.97px;
+}
+
+#main_bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#bacteria-2,
+#bacteria-3,
+#bacteria-4 {
+  position: absolute;
+  width: 23%;
+  height: auto;
+}
+
+#bacteria-2 {
+  top: 35%;
+  right: 19%;
+  transform: rotate(10deg);
+}
+
+#bacteria-3 {
+  top: 18%;
+  right: 0%;
+  transform: rotate(340deg);
+}
+
+#bacteria-4 {
+  bottom: 11%;
+  right: 3%;
+  transform: rotate(20deg);
+}
+
+.start_screen {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.start_screen_2 {
+  position: relative;
+  top: 50%;
+}
+
+.title {
+  color: rgb(255, 255, 255);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sub-title {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 3.44rem;
+  line-height: 1.2;
+  background: rgb(0, 64, 43);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.callAction {
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.button {
+  margin-top: 1.5rem;
+  border-radius: 20px;
+  background: rgb(210, 26, 35);
+  color: rgb(255, 255, 255);
+  font-size: 3.4rem;
+  width: 535px;
+  height: 150px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.drty_cooker,
+.drty_oven,
+.drty_sink,
+.drty_fridge,
+.drty_fridge2,
+.drty_bath,
+.drty_switch,
+.drty_door {
+  position: absolute;
+  height: auto;
+}
+
+.drty_cooker {
+  width: 44%;
+  top: 199px;
+  left: 442px;
+}
+
+.drty_oven {
+  top: 428px;
+  left: 430px;
+}
+
+.drty_sink {
+  top: 0;
+  left: 609px;
+  width: 62%;
+}
+
+.drty_fridge {
+  top: 217px;
+  left: 0;
+  width: 124px;
+}
+
+.drty_fridge2 {
+  top: 117px;
+  left: 199px;
+  width: 124px;
+}
+
+.drty_bath {
+  top: -113px;
+  right: -750px;
+}
+
+.drty_switch {
+  width: 17%;
+  top: 208px;
+  right: -359px;
+}
+
+.drty_door {
+  width: 17%;
+  top: 137px;
+  right: -953px;
+  transform: rotateY(45deg);
+}
+
+.bacteria-fridge,
+.bacteria-oven,
+.bacteria-sink,
+.bacteria-cooker,
+.bacteria-switch,
+.bacteria-door,
+.bacteria-bath {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.bacteria-fridge {
+  top: 270px;
+  left: -24px;
+  opacity: 1;
+}
+
+.bacteria-oven {
+  top: 372px;
+  left: 269px;
+}
+
+.bacteria-sink {
+  top: 119px;
+  left: 846px;
+  clip-path: inset(0% 0% 38% 0%);
+}
+
+.bacteria-cooker {
+  top: 22px;
+  left: 500px;
+}
+
+.bacteria-switch {
+  top: 208px;
+  right: -300px;
+}
+
+.bacteria-door {
+  width: 30%;
+  bottom: 46px;
+  right: -953px;
+}
+
+.bacteria-bath {
+  top: 66px;
+  right: -745px;
+  clip-path: inset(0% 0% 31% 0%);
+}
+
+.text_pregame {
+  border-radius: 20px;
+  position: absolute;
+  top: 38%;
+  left: 17.8%;
+  display: flex;
+  align-items: center;
+  padding: 60px 50px;
+  background-color: #006822;
+  z-index: 0;
+}
+
+.text_pregame p:last-child {
+  margin-left: 3rem;
+  color: rgb(255, 255, 255);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 105%;
+  letter-spacing: 0px;
+}
+
+.stanes {
+  position: absolute;
+}
+
+.pena,
+.pena_cooker,
+.pena_oven,
+.pena_sink,
+.pena_switch,
+.pena_door,
+.pena_bath {
+  position: absolute;
+  height: auto;
+  opacity: 0;
+}
+
+.pena {
+  width: 30%;
+  top: 0;
+  left: 0;
+}
+
+.pena_cooker {
+  width: 29%;
+  top: 0;
+  left: 420px;
+}
+
+.pena_oven {
+  width: 26%;
+  top: 228px;
+  left: 430px;
+}
+
+.pena_sink {
+  top: 4px;
+  left: 715px;
+  width: 35%;
+}
+
+.pena_switch {
+  width: 17%;
+  top: 208px;
+  right: -359px;
+}
+
+.pena_door {
+  width: 17%;
+  top: 137px;
+  right: -953px;
+  transform: rotateY(45deg);
+}
+
+.pena_bath {
+  top: -113px;
+  right: -750px;
+}
+
+.spray {
+  position: absolute;
+  height: auto;
+  bottom: 11px;
+  right: 0;
+  opacity: 0;
+}
+
+.scale {
+  position: absolute;
+  height: 36px;
+  bottom: 18px;
+  right: 38px;
+  opacity: 0;
+}
+
+.scale2 {
+  width: 93.6%;
+  position: absolute;
+  height: 30px;
+  bottom: 21px;
+  right: 41px;
+  opacity: 0;
+  clip-path: inset(0 0 0 0);
+}
+
+.start_game img.drty {
+  position: absolute;
+}
